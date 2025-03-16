@@ -1,9 +1,9 @@
 {
-  "name": "filebot",
+  "name": "mirror-bot",
   "version": "1.0.0",
   "description": "File manager that mirrors two directories",
   "main": "index.js",
-  "repository": "https://github.com/nicholasodonnell/filebot",
+  "repository": "https://github.com/nicholasodonnell/mirror-bot",
   "author": "Nicholas O'Donnell <nicholas@nicholasodonnell.com>",
   "license": "MIT",
   "dependencies": {

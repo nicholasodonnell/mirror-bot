@@ -58,7 +58,7 @@ const symlinkMissingFilesTo = uncurryN(2, dir =>
   ),
 )
 
-const filebot = opts => {
+const mirrorBot = opts => {
   const {
     permissions,
     pgid,
@@ -70,7 +70,7 @@ const filebot = opts => {
   } = opts
 
   console.log(`------------------------------`)
-  console.log(`\n[Starting filebot - ${new Date().toLocaleString()}]:`)
+  console.log(`\n[Starting Mirror Bot - ${new Date().toLocaleString()}]:`)
   console.log(`Opts: ${JSON.stringify(opts)}`)
 
   try {
@@ -105,11 +105,11 @@ const filebot = opts => {
     console.log('\n[Setting permissions]:')
     setPerimissionsFor(replica, { permissions, pgid, puid })
 
-    console.log(`\n[Filebot complete - ${new Date().toLocaleString()}]`)
+    console.log(`\n[Mirror bot complete - ${new Date().toLocaleString()}]`)
   } catch (e) {
-    const error = new VError(e, `Filebot failed`)
+    const error = new VError(e, `Mirror Bot failed`)
 
-    console.log(`\n[Filebot failed - ${new Date().toLocaleString()}]:`)
+    console.log(`\n[Mirror Bot failed - ${new Date().toLocaleString()}]:`)
     console.error(VError.fullStack(error))
 
     throw error
@@ -131,7 +131,7 @@ if (require.main === module) {
     .opts()
 
   try {
-    filebot(parseOpts(opts))
+    mirrorBot(parseOpts(opts))
 
     process.exit(0)
   } catch (e) {
@@ -139,4 +139,4 @@ if (require.main === module) {
   }
 }
 
-module.exports = filebot
+module.exports = mirrorBot

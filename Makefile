@@ -3,13 +3,13 @@ help: ## usage
 
 build: ## build docker image
 	@docker build \
-		--tag nicholasodonnell/filebot:latest \
+		--tag nicholasodonnell/mirror-bot:latest \
 		.
 
 clean: ## remove docker images
 	@docker rmi \
 		--force \
-			nicholasodonnell/filebot:latest
+			nicholasodonnell/mirror-bot:latest
 
 .PHONY: \
 	help \
