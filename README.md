@@ -1,4 +1,4 @@
-<img src="logo/banner.png" />
+<img src="logo/logo.png" />
 
 **Mirror Bot** is a file manager that syncs two directories: a **replica** which acts as a mirror, and a **primary** which acts as an authority. Mirror bot has four goals:
 1. Move any non-symlinked files that exist on the replica directory to the primary directory.
